@@ -1,9 +1,43 @@
 'use client'
 import { useState } from 'react';
-import { Clock, Calendar, Eye, Heart, Share2, User, Tag, ArrowLeft } from 'lucide-react';
+import { Clock, Calendar, Eye, Heart, Share2, Tag, ArrowLeft } from 'lucide-react';
+
+// Type definitions
+interface BlogSection {
+  heading: string;
+  content: string;
+  points?: string[];
+}
+
+interface BlogContent {
+  introduction: string;
+  sections: BlogSection[];
+  conclusion: string;
+}
+
+interface BlogPost {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  views: string;
+  author: string;
+  authorBio: string;
+  image: string;
+  category: string;
+  tags: string[];
+  likes: number;
+  content: BlogContent;
+}
+
+interface BlogDetailProps {
+  blog: BlogPost;
+  onBack: () => void;
+}
 
 // Blog data with full content
-const blogData = [
+const blogData: BlogPost[] = [
   {
     id: 1,
     title: "Top 10 Neighborhoods in Delhi NCR for Property Investment in 2025",
@@ -210,13 +244,13 @@ const blogData = [
 ];
 
 export default function BlogPage() {
-  const [selectedBlog, setSelectedBlog] = useState(null);
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedBlog, setSelectedBlog] = useState<BlogPost | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>('All');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
-  const categories = ['All', 'Market Analysis', 'Investment Tips', 'Buying Guide', 'Legal Advice', 'Neighborhood Guides'];
+  const categories: string[] = ['All', 'Market Analysis', 'Investment Tips', 'Buying Guide', 'Legal Advice', 'Neighborhood Guides'];
 
-  const filteredBlogs = blogData.filter(blog => {
+  const filteredBlogs = blogData.filter((blog: BlogPost) => {
     const matchesCategory = activeCategory === 'All' || blog.category === activeCategory;
     const matchesSearch = blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          blog.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
@@ -279,7 +313,7 @@ export default function BlogPage() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-bold mb-4">Categories</h3>
               <div className="space-y-2">
-                {categories.map(cat => (
+                {categories.map((cat: string) => (
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
@@ -299,7 +333,7 @@ export default function BlogPage() {
           {/* Blog Grid */}
           <main className="flex-1">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredBlogs.map((blog) => (
+              {filteredBlogs.map((blog: BlogPost) => (
                 <article key={blog.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition group">
                   <div className="relative overflow-hidden">
                     <img 
@@ -348,7 +382,7 @@ export default function BlogPage() {
                     </div>
 
                     <div className="flex flex-wrap gap-2 mt-4">
-                      {blog.tags.slice(0, 3).map((tag, idx) => (
+                      {blog.tags.slice(0, 3).map((tag: string, idx: number) => (
                         <span key={idx} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
                           {tag}
                         </span>
@@ -363,15 +397,34 @@ export default function BlogPage() {
       </div>
 
       {/* Newsletter Section */}
-   
+      <section className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Stay Updated with Buygrab Realty</h2>
+            <p className="text-gray-300 mb-8">
+              Get the latest property insights, market trends, and AI-powered recommendations delivered to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-6 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition whitespace-nowrap">
+                Subscribe →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
 
 // Blog Detail Component
-function BlogDetail({ blog, onBack }) {
-  const [liked, setLiked] = useState(false);
-  const [likes, setLikes] = useState(blog.likes);
+function BlogDetail({ blog, onBack }: BlogDetailProps) {
+  const [liked, setLiked] = useState<boolean>(false);
+  const [likes, setLikes] = useState<number>(blog.likes);
 
   const handleLike = () => {
     if (liked) {
@@ -482,7 +535,7 @@ function BlogDetail({ blog, onBack }) {
                   Introduction
                 </a>
               </li>
-              {blog.content.sections.map((section, idx) => (
+              {blog.content.sections.map((section: BlogSection, idx: number) => (
                 <li key={idx}>
                   <a
                     href={`#section-${idx}`}
@@ -507,13 +560,13 @@ function BlogDetail({ blog, onBack }) {
               <p className="text-gray-700 leading-relaxed">{blog.content.introduction}</p>
             </div>
 
-            {blog.content.sections.map((section, idx) => (
+            {blog.content.sections.map((section: BlogSection, idx: number) => (
               <div id={`section-${idx}`} key={idx} className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{section.heading}</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">{section.content}</p>
                 {section.points && (
                   <ul className="space-y-2 ml-6">
-                    {section.points.map((point, pidx) => (
+                    {section.points.map((point: string, pidx: number) => (
                       <li key={pidx} className="text-gray-700 leading-relaxed list-disc">
                         {point}
                       </li>
@@ -536,7 +589,7 @@ function BlogDetail({ blog, onBack }) {
               Tags:
             </h3>
             <div className="flex flex-wrap gap-2">
-              {blog.tags.map((tag, idx) => (
+              {blog.tags.map((tag: string, idx: number) => (
                 <span
                   key={idx}
                   className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm font-medium cursor-pointer transition"
