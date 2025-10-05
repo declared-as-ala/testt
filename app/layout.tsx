@@ -8,12 +8,32 @@ import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import ChatWidget from '@/components/ChatWidget';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial']
+});
 
 export const metadata: Metadata = {
   title: 'BuyGrab - AI-Powered Real Estate Platform',
   description: 'Find your dream property with AI precision. 10+ years of expertise, 170,000+ leads delivered.',
   metadataBase: new URL('https://www.buygrab.in'),
+  keywords: ['real estate', 'property', 'AI', 'buygrab', 'investment', 'rent', 'sale'],
+  authors: [{ name: 'BuyGrab Realty' }],
+  creator: 'BuyGrab Realty',
+  publisher: 'BuyGrab Realty',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'BuyGrab – AI-Powered Real Estate Platform',
     description: 'Find your dream property with AI precision. 10+ years of expertise, 170,000+ leads delivered.',
@@ -35,8 +55,16 @@ export const metadata: Metadata = {
     title: 'BuyGrab – AI-Powered Real Estate Platform',
     description: 'Find your dream property with AI precision. 10+ years of expertise, 170,000+ leads delivered.',
     images: ['https://www.buygrab.in/your-default-og-image.png'],
+    creator: '@buygrab',
   },
-  // Remove next-size-adjust from metadata to prevent duplication
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  themeColor: '#3B82F6',
+  colorScheme: 'light',
+  category: 'real estate',
 };
 
 export default function RootLayout({
