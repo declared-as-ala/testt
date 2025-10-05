@@ -3,10 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
   output: 'export', // Enable static exports
-  images: {
-    unoptimized: true, // Required for static export
-  },
-  
   // Performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react'],
@@ -22,8 +18,8 @@ const nextConfig = {
   // Modern JavaScript build target (ES2020+)
   swcMinify: true,
   
-  // Configure external image domains with optimization
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -61,6 +57,29 @@ const nextConfig = {
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
+      images: {
+        unoptimized: true,
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'images.unsplash.com',
+            port: '',
+            pathname: '/**',
+          },
+          {
+            protocol: 'https',
+            hostname: 'www.buygrab.in',
+            port: '',
+            pathname: '/**',
+          },
+        ],
+        formats: ['image/avif', 'image/webp'],
+        minimumCacheTTL: 31536000, // 1 year cache
+        dangerouslyAllowSVG: true,
+        contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+        deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+        imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+      },
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
