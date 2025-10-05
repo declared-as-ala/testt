@@ -30,7 +30,7 @@ function fixVoidElements(html) {
   // Fix specific meta tag issues
   // Fix next-size-adjust meta tag without content attribute
   fixedHTML = fixedHTML.replace(
-    /<meta\s+name="next-size-adjust"\s*>/gi,
+    /<meta\s+name="next-size-adjust"\s*(?!content=)[^>]*>/gi,
     '<meta name="next-size-adjust" content="auto">'
   );
   
