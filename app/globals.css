@@ -273,6 +273,15 @@ footer a:hover {
   background-color: #c2410c !important; /* Dark orange for better contrast */
 }
 
+/* Ensure all blue buttons have sufficient contrast */
+.bg-blue-600 {
+  background-color: #1d4ed8 !important; /* Darker blue for better contrast */
+}
+
+.bg-blue-700 {
+  background-color: #1e3a8a !important; /* Even darker blue for hover states */
+}
+
 @layer utilities {
   .text-gradient {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600;
