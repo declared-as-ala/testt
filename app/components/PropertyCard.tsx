@@ -55,7 +55,7 @@ export default function PropertyCard({ title, location, price, beds, baths, area
           <h3 className="text-2xl font-bold text-black">{price}</h3>
           <div className="flex items-center space-x-1">
             <div className="w-2 h-2 rounded-full bg-green-500" aria-hidden="true"></div>
-            <span className="text-sm text-green-600 font-medium">Available</span>
+            <span className="text-sm text-green-800 font-medium">Available</span>
           </div>
         </div>
         
