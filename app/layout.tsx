@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'BuyGrab - AI-Powered Real Estate Platform',
   description: 'Find your dream property with AI precision. 10+ years of expertise, 170,000+ leads delivered.',
-  // you can also add more fields if needed, such as openGraph, twitter, etc.
+  metadataBase: new URL('https://www.buygrab.in'),
   openGraph: {
     title: 'BuyGrab – AI-Powered Real Estate Platform',
     description: 'Find your dream property with AI precision. 10+ years of expertise, 170,000+ leads delivered.',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: 'BuyGrab Realty',
     images: [
       {
-        url: 'https://www.buygrab.in/your-default-og-image.png',  // change to the actual image URL you want
+        url: 'https://www.buygrab.in/your-default-og-image.png',
         width: 1200,
         height: 630,
         alt: 'BuyGrab Real Estate',
@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     description: 'Find your dream property with AI precision. 10+ years of expertise, 170,000+ leads delivered.',
     images: ['https://www.buygrab.in/your-default-og-image.png'],
   },
+  other: {
+    'next-size-adjust': 'auto'
+  }
 };
 
 export default function RootLayout({
