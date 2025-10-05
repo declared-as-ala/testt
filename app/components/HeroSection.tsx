@@ -51,7 +51,7 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto mb-8">
           <div className="bg-white rounded-2xl p-3 shadow-2xl flex items-center">
             <svg
-              className="w-6 h-6 text-gray-400 ml-4"
+              className="w-6 h-6 text-black ml-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -68,14 +68,14 @@ export default function HeroSection() {
               placeholder="Say 'Find 3-bed homes under ₹50L near schools'"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 px-4 py-4 text-gray-800 text-lg focus:outline-none bg-transparent"
+              className="flex-1 px-4 py-4 text-black text-lg focus:outline-none bg-transparent"
             />
             <button 
               className="mr-2 p-2 hover:bg-gray-100 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Voice search"
             >
               <svg
-                className="w-6 h-6 text-gray-500"
+                className="w-6 h-6 text-black"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

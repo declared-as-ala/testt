@@ -300,10 +300,10 @@ export default function BlogPage() {
                     className="w-16 h-16 rounded object-cover"
                   />
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-semibold text-gray-800 line-clamp-2 hover:text-blue-600 cursor-pointer">
+                    <p className="text-sm font-semibold text-black line-clamp-2 hover:text-blue-600 cursor-pointer">
                       Top 10 Neighborhoods
                     </p>
-                    <p className="text-xs text-gray-500 mt-1">5,243 views</p>
+                    <p className="text-xs text-black mt-1">5,243 views</p>
                   </div>
                 </div>
               </div>
@@ -358,11 +358,11 @@ export default function BlogPage() {
                       </span>
                     </div>
 
-                    <h2 className="text-xl font-bold mb-3 text-gray-800 hover:text-blue-600 transition cursor-pointer line-clamp-2">
+                    <h2 className="text-xl font-bold mb-3 text-black hover:text-blue-600 transition cursor-pointer line-clamp-2">
                       {blog.title}
                     </h2>
                     
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    <p className="text-black text-sm mb-4 line-clamp-2">
                       {blog.excerpt}
                     </p>
 
@@ -371,7 +371,7 @@ export default function BlogPage() {
                         <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-xs">
                           {blog.author.charAt(0)}
                         </div>
-                        <span className="text-sm font-medium text-gray-700">{blog.author}</span>
+                        <span className="text-sm font-medium text-black">{blog.author}</span>
                       </div>
                       <button 
                         onClick={() => setSelectedBlog(blog)}

@@ -60,8 +60,8 @@ export default function ChatWidget() {
           {/* Chat Body */}
           <div className="flex-1 bg-blue-600 p-6 overflow-y-auto">
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h4 className="text-xl font-bold text-gray-900 mb-2">Start Chart</h4>
-              <p className="text-gray-500 text-sm mb-4">We typically reply in a few seconds</p>
+              <h4 className="text-xl font-bold text-black mb-2">Start Chart</h4>
+              <p className="text-black text-sm mb-4">We typically reply in a few seconds</p>
               <button 
                 className="text-blue-600 hover:text-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-full p-1"
                 aria-label="Send message"
@@ -87,7 +87,7 @@ export default function ChatWidget() {
               className="p-3 hover:bg-gray-100 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               aria-label="Chat"
             >
-              <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" />
               </svg>
             </button>
@@ -95,7 +95,7 @@ export default function ChatWidget() {
 
           {/* Powered by */}
           <div className="bg-white px-4 py-2 text-center border-t border-gray-100">
-            <div className="inline-flex items-center space-x-2 text-xs text-gray-500">
+            <div className="inline-flex items-center space-x-2 text-xs text-black">
               <span>⚡</span>
               <span>Powered by tawk.to</span>
             </div>
