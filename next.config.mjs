@@ -7,7 +7,13 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     webVitalsAttribution: ['CLS', 'LCP'],
+    optimizeCss: true, // Enable CSS optimization
+    swcFileReading: true, // Faster builds
   },
+  
+  // Optimize CSS handling
+  cssModules: true,
+  optimizeFonts: true,
 
   // Modern JavaScript build target (ES2020+)
   swcMinify: true,

@@ -75,36 +75,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Only preconnect to used domains */}
-        <link rel="preconnect" href="https://www.buygrab.in" />
-        {/* Preload main CSS for render speed */}
-        <link rel="preload" href="/_next/static/css/e8f382cdc1d350b8.css" as="style" />
-        {/* Preload main font if self-hosted */}
-        {/* <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
-      </head>
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className}>
         <CustomCursor />
         <Header />
-        {/* Optimized hero image example */}
-        <main>
-          <section className="relative w-full h-[296px] flex items-center justify-center bg-gray-100">
-            <Image
-              src="/images/pexels-photo-1571460-lg.webp"
-              alt="Hero"
-              width={395}
-              height={296}
-              priority
-              sizes="(max-width: 768px) 100vw, 395px"
-              quality={70}
-              style={{ objectFit: 'cover', borderRadius: '1rem' }}
-            />
-          </section>
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
-        {/* Lazy-load ChatWidget for performance */}
         {typeof window !== 'undefined' && <ChatWidget />}
       </body>
     </html>

@@ -34,6 +34,10 @@ export function middleware(request: NextRequest) {
   // Cache headers for static assets
   if (request.nextUrl.pathname.startsWith('/_next/static/')) {
     response.headers.set('Cache-Control', 'public, max-age=31536000, immutable')
+    // Set correct MIME type for CSS files
+    if (request.nextUrl.pathname.endsWith('.css')) {
+      response.headers.set('Content-Type', 'text/css; charset=utf-8')
+    }
   }
   
   if (request.nextUrl.pathname.startsWith('/images/')) {
