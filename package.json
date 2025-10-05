@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/fix-html.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "fix-html": "node scripts/fix-html.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",
