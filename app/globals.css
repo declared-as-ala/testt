@@ -153,30 +153,39 @@ img {
   }
 }
 
-/* Improve contrast ratios */
+/* Improve contrast ratios - WCAG AA compliant */
 .text-gray-600 {
-  color: #1F2937 !important; /* Better contrast than default gray-600 */
+  color: #111827 !important; /* Maximum contrast for better readability */
 }
 
 .text-gray-500 {
-  color: #374151 !important; /* Better contrast than default gray-500 */
+  color: #1F2937 !important; /* High contrast for better readability */
 }
 
 .text-gray-400 {
-  color: #4B5563 !important; /* Better contrast than default gray-400 */
+  color: #374151 !important; /* High contrast for better readability */
 }
 
 /* Ensure high contrast for all text elements */
 .text-gray-700 {
-  color: #111827 !important; /* Maximum contrast for important text */
+  color: #000000 !important; /* Maximum contrast for important text */
 }
 
 .text-gray-300 {
-  color: #6B7280 !important; /* Better contrast for light text */
+  color: #1F2937 !important; /* High contrast for light text */
 }
 
 .text-gray-200 {
-  color: #4B5563 !important; /* Better contrast for very light text */
+  color: #374151 !important; /* High contrast for very light text */
+}
+
+/* Ensure all gray text has sufficient contrast */
+.text-gray-800 {
+  color: #000000 !important; /* Maximum contrast */
+}
+
+.text-gray-900 {
+  color: #000000 !important; /* Maximum contrast */
 }
 
 /* Ensure sufficient contrast for interactive elements */
