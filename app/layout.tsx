@@ -7,8 +7,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import ChatWidget from '@/components/ChatWidget';
-import { readFileSync } from 'fs';
-import { join } from 'path';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -75,9 +73,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Read critical CSS
-  const criticalCSS = readFileSync(join(process.cwd(), 'app', 'critical.css'), 'utf8');
-  
   return (
     <html lang="en">
       <head>
@@ -95,19 +90,6 @@ export default function RootLayout({
           type="image/webp"
           fetchPriority="high"
         />
-        
-        {/* Inline critical CSS */}
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
-        
-        {/* Defer non-critical CSS */}
-        <link 
-          rel="preload" 
-          href="/_next/static/css/app/layout.css" 
-          as="style" 
-        />
-        <noscript>
-          <link rel="stylesheet" href="/_next/static/css/app/layout.css" />
-        </noscript>
         
         {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />

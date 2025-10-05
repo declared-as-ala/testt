@@ -5,7 +5,6 @@ const nextConfig = {
   // Performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    optimizeCss: true,
     webVitalsAttribution: ['CLS', 'LCP'],
   },
 
