@@ -14,9 +14,11 @@ export default function Header() {
             <img 
               src="https://www.buygrab.in/buygrab-logo.png" 
               alt="BuyGrab Realty" 
-              width={200} 
-              height={50}
+              width={259} 
+              height={40}
+              style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
               className="h-10 w-auto"
+              loading="lazy"
             />
           </Link>
           
