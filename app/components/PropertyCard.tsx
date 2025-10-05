@@ -27,7 +27,7 @@ export default function PropertyCard({ title, location, price, beds, baths, area
         />
         <div className="absolute top-4 left-4">
           <span 
-            className={`${status === 'For Sale' ? 'bg-green-800' : 'bg-blue-800'} text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg`}
+            className={`${status === 'For Sale' ? 'bg-emerald-500' : 'bg-blue-500'} text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg`}
             aria-label={`Property status: ${status}`}
           >
             {status}
@@ -36,7 +36,7 @@ export default function PropertyCard({ title, location, price, beds, baths, area
         {featured && (
           <div className="absolute top-4 right-4">
             <span 
-              className="bg-orange-800 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg"
+              className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg"
               aria-label="Featured property"
             >
               Featured
