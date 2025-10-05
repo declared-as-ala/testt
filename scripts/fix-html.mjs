@@ -27,6 +27,26 @@ function fixVoidElements(html) {
     fixedHTML = fixedHTML.replace(regex, `<${tag}$1>`);
   });
   
+  // Fix specific meta tag issues
+  // Fix next-size-adjust meta tag without content attribute
+  fixedHTML = fixedHTML.replace(
+    /<meta\s+name="next-size-adjust"\s*>/gi,
+    '<meta name="next-size-adjust" content="auto">'
+  );
+  
+  // Fix any meta tag without content attribute that has a name attribute
+  fixedHTML = fixedHTML.replace(
+    /<meta\s+name="([^"]+)"\s*(?!content=)[^>]*>/gi,
+    (match, name) => {
+      // Only add content if it's a known meta tag that needs it
+      const metaTagsNeedingContent = ['next-size-adjust', 'description', 'keywords', 'author', 'robots'];
+      if (metaTagsNeedingContent.includes(name)) {
+        return match.replace(/>$/, ' content="auto">');
+      }
+      return match;
+    }
+  );
+  
   return fixedHTML;
 }
 
