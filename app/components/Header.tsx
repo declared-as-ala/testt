@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image 
-              src="https://www.buygrab.in/buygrab-logo.png" 
+              src="/vercel.svg" 
               alt="BuyGrab Realty" 
               width={200} 
               height={50}

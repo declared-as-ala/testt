@@ -17,7 +17,7 @@ export default function PropertyCard({ title, location, price, beds, baths, area
     <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
       <div className="relative h-64 bg-gray-200 overflow-hidden group">
         <Image 
-          src={image} 
+          src="/vercel.svg" 
           alt={`${title} - ${location} property for ${status.toLowerCase()}`}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-500"
