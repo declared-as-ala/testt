@@ -155,15 +155,28 @@ img {
 
 /* Improve contrast ratios */
 .text-gray-600 {
-  color: #374151 !important; /* Better contrast than default gray-600 */
+  color: #1F2937 !important; /* Better contrast than default gray-600 */
 }
 
 .text-gray-500 {
-  color: #4B5563 !important; /* Better contrast than default gray-500 */
+  color: #374151 !important; /* Better contrast than default gray-500 */
 }
 
 .text-gray-400 {
-  color: #6B7280 !important; /* Better contrast than default gray-400 */
+  color: #4B5563 !important; /* Better contrast than default gray-400 */
+}
+
+/* Ensure high contrast for all text elements */
+.text-gray-700 {
+  color: #111827 !important; /* Maximum contrast for important text */
+}
+
+.text-gray-300 {
+  color: #6B7280 !important; /* Better contrast for light text */
+}
+
+.text-gray-200 {
+  color: #4B5563 !important; /* Better contrast for very light text */
 }
 
 /* Ensure sufficient contrast for interactive elements */
@@ -189,6 +202,35 @@ select:disabled,
 textarea:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+/* Additional contrast improvements */
+.text-gray-800 {
+  color: #111827 !important; /* Maximum contrast */
+}
+
+.text-gray-900 {
+  color: #000000 !important; /* Maximum contrast */
+}
+
+/* Ensure all links have sufficient contrast */
+a {
+  color: #1D4ED8 !important; /* High contrast blue */
+}
+
+a:hover {
+  color: #1E40AF !important; /* Darker blue on hover */
+}
+
+/* Ensure form elements have proper contrast */
+input, select, textarea {
+  color: #111827 !important; /* High contrast text */
+  background-color: #FFFFFF !important; /* High contrast background */
+}
+
+/* Ensure placeholder text has sufficient contrast */
+::placeholder {
+  color: #6B7280 !important; /* Better contrast for placeholders */
 }
 
 @layer utilities {

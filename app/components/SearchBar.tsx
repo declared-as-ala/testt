@@ -6,12 +6,12 @@ export default function SearchBar() {
 
   return (
     <div className="bg-white rounded-lg shadow-xl p-6 -mt-16 relative z-20 max-w-4xl mx-auto">
-      <div className="flex space-x-4 mb-4" role="tablist" aria-label="Search type">
+      <div className="flex space-x-4 mb-4" role="radiogroup" aria-label="Search type">
         <button 
           onClick={() => setSearchType('buy')}
           className={`px-6 py-2 rounded-full font-semibold transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${searchType === 'buy' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-          role="tab"
-          aria-selected={searchType === 'buy'}
+          role="radio"
+          aria-checked={searchType === 'buy'}
           aria-label="Search properties to buy"
         >
           Buy
@@ -19,8 +19,8 @@ export default function SearchBar() {
         <button 
           onClick={() => setSearchType('rent')}
           className={`px-6 py-2 rounded-full font-semibold transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${searchType === 'rent' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-          role="tab"
-          aria-selected={searchType === 'rent'}
+          role="radio"
+          aria-checked={searchType === 'rent'}
           aria-label="Search properties to rent"
         >
           Rent
@@ -28,8 +28,8 @@ export default function SearchBar() {
         <button 
           onClick={() => setSearchType('sell')}
           className={`px-6 py-2 rounded-full font-semibold transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${searchType === 'sell' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
-          role="tab"
-          aria-selected={searchType === 'sell'}
+          role="radio"
+          aria-checked={searchType === 'sell'}
           aria-label="List property for sale"
         >
           Sell
