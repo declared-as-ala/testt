@@ -57,14 +57,15 @@ export const metadata: Metadata = {
     images: ['https://www.buygrab.in/your-default-og-image.png'],
     creator: '@buygrab',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
+  category: 'real estate',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
   themeColor: '#3B82F6',
   colorScheme: 'light',
-  category: 'real estate',
 };
 
 export default function RootLayout({
