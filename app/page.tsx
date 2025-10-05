@@ -201,7 +201,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      {/* Newsletter Secti */}
      
     </>
   )
