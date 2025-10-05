@@ -3,7 +3,7 @@
  * Removes trailing slashes from void elements for W3C compliance
  */
 
-class HTMLFixPlugin {
+export class HTMLFixPlugin {
   apply(compiler) {
     compiler.hooks.emit.tapAsync('HTMLFixPlugin', (compilation, callback) => {
       const voidElements = [
@@ -35,4 +35,4 @@ class HTMLFixPlugin {
   }
 }
 
-module.exports = HTMLFixPlugin;
+export default HTMLFixPlugin;

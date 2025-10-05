@@ -1,4 +1,4 @@
-const HTMLFixPlugin = require('./plugins/html-fix-plugin.js');
+import { HTMLFixPlugin } from './plugins/html-fix-plugin.mjs';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -16,10 +16,7 @@ const nextConfig = {
     ],
   },
 
-  // Optional: Future-proof Next.js 14 features
-  experimental: {
-    appDir: true, // if you use /app folder
-  },
+  // Next.js 14 features are enabled by default
 
   // Configure trailing slash behavior
   trailingSlash: false,
