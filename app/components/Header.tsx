@@ -21,10 +21,12 @@ export default function Header() {
           </Link>
           
           <button 
-            className="lg:hidden text-gray-700"
+            className="lg:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md p-1"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -33,7 +35,11 @@ export default function Header() {
             </svg>
           </button>
 
-          <ul className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex flex-col lg:flex-row lg:items-center lg:space-x-8 absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent p-6 lg:p-0 space-y-4 lg:space-y-0 shadow-lg lg:shadow-none`}>
+          <ul 
+            className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex flex-col lg:flex-row lg:items-center lg:space-x-8 absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent p-6 lg:p-0 space-y-4 lg:space-y-0 shadow-lg lg:shadow-none`}
+            role="menu"
+            aria-label="Main navigation"
+          >
             <li><Link href="/" className="block text-gray-700 hover:text-blue-600 transition text-base font-medium">Home</Link></li>
             <li><Link href="/about" className="block text-gray-700 hover:text-blue-600 transition text-base font-medium">About</Link></li>
             <li><Link href="/buy" className="block text-gray-700 hover:text-blue-600 transition text-base font-medium">Buy</Link></li>
@@ -45,8 +51,11 @@ export default function Header() {
           </ul>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button 
+              className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md p-1"
+              aria-label="Sign in to your account"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
               <span className="text-sm font-medium">Sign In</span>

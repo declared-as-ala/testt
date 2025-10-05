@@ -70,12 +70,16 @@ export default function HeroSection() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="flex-1 px-4 py-4 text-gray-800 text-lg focus:outline-none bg-transparent"
             />
-            <button className="mr-2 p-2 hover:bg-gray-100 rounded-lg transition">
+            <button 
+              className="mr-2 p-2 hover:bg-gray-100 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              aria-label="Voice search"
+            >
               <svg
                 className="w-6 h-6 text-gray-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -90,16 +94,28 @@ export default function HeroSection() {
 
         {/* Category Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <button className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition border border-white/30">
+          <button 
+            className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition border border-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
+            aria-label="Search luxury homes"
+          >
             Luxury Homes
           </button>
-          <button className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition border border-white/30">
+          <button 
+            className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition border border-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
+            aria-label="Search apartments"
+          >
             Apartments
           </button>
-          <button className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition border border-white/30">
+          <button 
+            className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition border border-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
+            aria-label="Search condos"
+          >
             Condos
           </button>
-          <button className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition border border-white/30">
+          <button 
+            className="bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full font-medium hover:bg-white/20 transition border border-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
+            aria-label="Search townhouses"
+          >
             Townhouses
           </button>
         </div>

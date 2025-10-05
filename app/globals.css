@@ -153,6 +153,44 @@ img {
   }
 }
 
+/* Improve contrast ratios */
+.text-gray-600 {
+  color: #374151 !important; /* Better contrast than default gray-600 */
+}
+
+.text-gray-500 {
+  color: #4B5563 !important; /* Better contrast than default gray-500 */
+}
+
+.text-gray-400 {
+  color: #6B7280 !important; /* Better contrast than default gray-400 */
+}
+
+/* Ensure sufficient contrast for interactive elements */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #3B82F6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Improve contrast for form elements */
+input::placeholder,
+textarea::placeholder {
+  color: #6B7280 !important; /* Better contrast for placeholders */
+}
+
+/* Ensure proper contrast for disabled states */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 @layer utilities {
   .text-gradient {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600;
