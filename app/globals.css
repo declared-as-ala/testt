@@ -251,6 +251,15 @@ input, select, textarea {
   color: #14532d !important; /* Darker green for better contrast */
 }
 
+/* Ensure footer links have sufficient contrast */
+footer a {
+  color: #FFFFFF !important; /* White text for maximum contrast on dark background */
+}
+
+footer a:hover {
+  color: #FFFFFF !important; /* Maintain white on hover */
+}
+
 @layer utilities {
   .text-gradient {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600;

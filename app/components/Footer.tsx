@@ -67,11 +67,11 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-5 text-lg">Company</h4>
           <ul className="space-y-3 text-white text-sm">
-            <li><Link href="#" className="hover:text-white transition-colors">About Us</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Our Team</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Press</Link></li>
-            <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link ></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">About Us</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Our Team</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Careers</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Press</Link></li>
+            <li><Link href="/contact" className="text-white hover:text-white transition-colors">Contact</Link ></li>
           </ul>
         </div>
 
@@ -79,10 +79,10 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-5 text-lg">Services</h4>
           <ul className="space-y-3 text-white text-sm">
-            <li><Link href="/best-real-estate-lead-generation-services-india" className="hover:text-white transition-colors">Real Estate Lead Generation</Link></li>
-            <li><Link href="/residential-properties" className="hover:text-white transition-colors">Residential Properties</Link></li>
-            <li><Link href="/flat-for-rent-near-me" className="hover:text-white transition-colors">Flats for Rent Near Me</Link></li>
-            <li><Link href="/buy-plots-near-jewar-airport" className="hover:text-white transition-colors">Jewar Airport Plots</Link></li>
+            <li><Link href="/best-real-estate-lead-generation-services-india" className="text-white hover:text-white transition-colors">Real Estate Lead Generation</Link></li>
+            <li><Link href="/residential-properties" className="text-white hover:text-white transition-colors">Residential Properties</Link></li>
+            <li><Link href="/flat-for-rent-near-me" className="text-white hover:text-white transition-colors">Flats for Rent Near Me</Link></li>
+            <li><Link href="/buy-plots-near-jewar-airport" className="text-white hover:text-white transition-colors">Jewar Airport Plots</Link></li>
           </ul>
         </div>
 
@@ -90,10 +90,10 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-5 text-lg">Properties</h4>
           <ul className="space-y-3 text-white text-sm">
-            <li><Link href="/flat-for-rent-in-new-ashok-nagar" className="hover:text-white transition-colors">Flats in New Ashok Nagar</Link></li>
-            <li><Link href="/1-bhk-flat-in-new-ashok-nagar-for-rent" className="hover:text-white transition-colors">1 BHK Flat Rent</Link></li>
-            <li><Link href="/flat-for-sale-in-new-ashok-nagar-delhi" className="hover:text-white transition-colors">Flats for Sale Delhi</Link></li>
-            <li><Link href="/1-bhk-flat-for-sale-in-new-ashok-nagar-delhi" className="hover:text-white transition-colors">1 BHK Flat Sale</Link></li>
+            <li><Link href="/flat-for-rent-in-new-ashok-nagar" className="text-white hover:text-white transition-colors">Flats in New Ashok Nagar</Link></li>
+            <li><Link href="/1-bhk-flat-in-new-ashok-nagar-for-rent" className="text-white hover:text-white transition-colors">1 BHK Flat Rent</Link></li>
+            <li><Link href="/flat-for-sale-in-new-ashok-nagar-delhi" className="text-white hover:text-white transition-colors">Flats for Sale Delhi</Link></li>
+            <li><Link href="/1-bhk-flat-for-sale-in-new-ashok-nagar-delhi" className="text-white hover:text-white transition-colors">1 BHK Flat Sale</Link></li>
           </ul>
         </div>
 
@@ -101,11 +101,11 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-5 text-lg">Resources</h4>
           <ul className="space-y-3 text-white text-sm">
-            <li><Link href="#" className="hover:text-white transition-colors">Market Reports</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Investment Guide</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Mortgage Calculator</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Neighborhood Guide</Link></li>
-            <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Market Reports</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Investment Guide</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Mortgage Calculator</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Neighborhood Guide</Link></li>
+            <li><Link href="/blog" className="text-white hover:text-white transition-colors">Blog</Link></li>
           </ul>
         </div>
 
@@ -113,11 +113,11 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-5 text-lg">Legal</h4>
           <ul className="space-y-3 text-white text-sm">
-            <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Disclaimer</Link></li>
-            <li><Link href="#" className="hover:text-white transition-colors">Accessibility</Link></li>
+            <li><Link href="/privacy-policy" className="text-white hover:text-white transition-colors">Privacy Policy</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Terms & Conditions</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Cookie Policy</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Disclaimer</Link></li>
+            <li><Link href="#" className="text-white hover:text-white transition-colors">Accessibility</Link></li>
           </ul>
         </div>
       </div>
