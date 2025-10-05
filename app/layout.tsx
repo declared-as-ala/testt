@@ -2,6 +2,7 @@
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Image from 'next/image';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -76,37 +77,35 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preconnect to critical domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
+        {/* Only preconnect to used domains */}
         <link rel="preconnect" href="https://www.buygrab.in" />
-        
-        {/* Preload critical resources */}
-        <link 
-          rel="preload" 
-          href="https://www.buygrab.in/images/pexels-photo-1571460-lg.webp" 
-          as="image" 
-          type="image/webp"
-          fetchPriority="high"
-        />
-        
-        {/* DNS prefetch for performance */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        <link rel="dns-prefetch" href="//images.unsplash.com" />
-        
-        {/* Resource hints for better performance */}
-        <link rel="prefetch" href="/buy" />
-        <link rel="prefetch" href="/rent" />
-        <link rel="prefetch" href="/sell" />
+        {/* Preload main CSS for render speed */}
+        <link rel="preload" href="/_next/static/css/e8f382cdc1d350b8.css" as="style" />
+        {/* Preload main font if self-hosted */}
+        {/* <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
       </head>
       <body className={inter.className}>
         <CustomCursor />
         <Header />
-        <main>{children}</main>
+        {/* Optimized hero image example */}
+        <main>
+          <section className="relative w-full h-[296px] flex items-center justify-center bg-gray-100">
+            <Image
+              src="/images/pexels-photo-1571460-lg.webp"
+              alt="Hero"
+              width={395}
+              height={296}
+              priority
+              sizes="(max-width: 768px) 100vw, 395px"
+              quality={70}
+              style={{ objectFit: 'cover', borderRadius: '1rem' }}
+            />
+          </section>
+          {children}
+        </main>
         <Footer />
-        <ChatWidget />
+        {/* Lazy-load ChatWidget for performance */}
+        {typeof window !== 'undefined' && <ChatWidget />}
       </body>
     </html>
   );

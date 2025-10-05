@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  productionBrowserSourceMaps: true,
   
   // Performance optimizations
   experimental: {
@@ -40,7 +41,8 @@ const nextConfig = {
   
   // Compiler optimizations
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+  removeConsole: process.env.NODE_ENV === 'production',
+  target: 'es2020',
   },
   
   // Webpack optimizations
