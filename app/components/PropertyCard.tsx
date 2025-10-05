@@ -16,17 +16,11 @@ export default function PropertyCard({ title, location, price, beds, baths, area
   return (
     <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
       <div className="relative h-64 bg-gray-200 overflow-hidden group">
-        <Image 
-          src="/vercel.svg" 
+        <img 
+          src={image} 
           alt={`${title} - ${location} property for ${status.toLowerCase()}`}
-          fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          priority={false}
+          className="object-cover group-hover:scale-110 transition-transform duration-500 w-full h-full"
           loading="lazy"
-          quality={85}
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
         <div className="absolute top-4 left-4">
           <span 

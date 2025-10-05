@@ -11,8 +11,8 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image 
-              src="/vercel.svg" 
+            <img 
+              src="https://www.buygrab.in/buygrab-logo.png" 
               alt="BuyGrab Realty" 
               width={200} 
               height={50}
