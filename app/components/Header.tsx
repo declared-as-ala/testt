@@ -12,13 +12,13 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src="/buygrab-logo.png"
+              src="https://www.buygrab.in/buygrab-logo.png"
               alt="BuyGrab Realty"
               width={436}
               height={67}
               priority
-              style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
-              className="h-10 w-auto"
+              style={{ maxWidth: '240px', height: 'auto', display: 'block', objectFit: 'contain' }}
+              className="h-10 w-auto mx-auto"
             />
           </Link>
           
