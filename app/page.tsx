@@ -141,6 +141,7 @@ export default function Home() {
       {/* Additional Info */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">More Information</h2>
           <p className="text-center text-gray-600 text-lg max-w-5xl mx-auto leading-relaxed mb-12">
             We also cater to customers searching for studio apartments near me, property to buy near me, property for sale near me, and other properties near me. With real-time updates and personalized alerts, you'll never miss an opportunity.
           </p>

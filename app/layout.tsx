@@ -36,9 +36,7 @@ export const metadata: Metadata = {
     description: 'Find your dream property with AI precision. 10+ years of expertise, 170,000+ leads delivered.',
     images: ['https://www.buygrab.in/your-default-og-image.png'],
   },
-  other: {
-    'next-size-adjust': 'auto'
-  }
+  // Remove next-size-adjust from metadata to prevent duplication
 };
 
 export default function RootLayout({

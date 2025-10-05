@@ -1,3 +1,5 @@
+const HTMLFixPlugin = require('./plugins/html-fix-plugin.js');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -30,7 +32,34 @@ const nextConfig = {
         fs: false,
       };
     }
+    
+    // Add HTML fix plugin
+    config.plugins.push(new HTMLFixPlugin());
+    
     return config;
+  },
+
+  // Custom headers for HTML compliance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+        ],
+      },
+    ];
   },
 };
 
