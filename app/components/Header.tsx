@@ -61,7 +61,7 @@ export default function Header() {
               </svg>
               <span className="text-sm font-medium">Sign In</span>
             </button>
-            <Link href="/sell" className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition flex items-center space-x-2">
+            <Link href="/sell" className="bg-blue-800 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-blue-900 transition flex items-center space-x-2">
               <span className="text-lg">+</span>
               <span>List Property</span>
             </Link>

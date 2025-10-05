@@ -275,11 +275,19 @@ footer a:hover {
 
 /* Ensure all blue buttons have sufficient contrast */
 .bg-blue-600 {
-  background-color: #1d4ed8 !important; /* Darker blue for better contrast */
+  background-color: #1e3a8a !important; /* Very dark blue for maximum contrast */
 }
 
 .bg-blue-700 {
-  background-color: #1e3a8a !important; /* Even darker blue for hover states */
+  background-color: #1e40af !important; /* Even darker blue for hover states */
+}
+
+.bg-blue-800 {
+  background-color: #1e40af !important; /* Very dark blue for maximum contrast */
+}
+
+.bg-blue-900 {
+  background-color: #1e3a8a !important; /* Darkest blue for maximum contrast */
 }
 
 @layer utilities {
