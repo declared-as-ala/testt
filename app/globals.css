@@ -260,6 +260,19 @@ footer a:hover {
   color: #FFFFFF !important; /* Maintain white on hover */
 }
 
+/* Ensure property status badges have sufficient contrast */
+.bg-emerald-500 {
+  background-color: #166534 !important; /* Dark green for better contrast */
+}
+
+.bg-blue-500 {
+  background-color: #1e40af !important; /* Dark blue for better contrast */
+}
+
+.bg-orange-500 {
+  background-color: #c2410c !important; /* Dark orange for better contrast */
+}
+
 @layer utilities {
   .text-gradient {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600;
