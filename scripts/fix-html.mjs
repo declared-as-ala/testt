@@ -47,6 +47,16 @@ function fixVoidElements(html) {
     }
   );
   
+  // Remove duplicate content attributes
+  fixedHTML = fixedHTML.replace(
+    /content="[^"]*"\s+content="[^"]*"/gi,
+    (match) => {
+      // Keep only the first content attribute
+      const firstContent = match.match(/content="[^"]*"/)[0];
+      return firstContent;
+    }
+  );
+  
   return fixedHTML;
 }
 
