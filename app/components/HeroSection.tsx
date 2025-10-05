@@ -42,7 +42,7 @@ export default function HeroSection() {
         </h2>
 
         {/* Description */}
-        <p className="text-lg md:text-xl mb-12 font-light max-w-3xl mx-auto text-gray-200">
+        <p className="text-lg md:text-xl mb-12 font-light max-w-3xl mx-auto text-white">
           Experience intelligent property search that understands exactly what
           you're looking for.
         </p>
