@@ -4,11 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/fix-html.js",
-    "build:clean": "next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "fix-html": "node scripts/fix-html.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",
