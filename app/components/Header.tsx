@@ -35,11 +35,11 @@ export default function Header() {
             </svg>
           </button>
 
-          <ul 
+          <nav 
             className={`${isMenuOpen ? 'flex' : 'hidden'} lg:flex flex-col lg:flex-row lg:items-center lg:space-x-8 absolute lg:relative top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent p-6 lg:p-0 space-y-4 lg:space-y-0 shadow-lg lg:shadow-none`}
-            role="navigation"
             aria-label="Main navigation"
           >
+            <ul className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 space-y-4 lg:space-y-0 w-full lg:w-auto">
             <li><Link href="/" className="block text-black hover:text-blue-600 transition text-base font-medium">Home</Link></li>
             <li><Link href="/about" className="block text-black hover:text-blue-600 transition text-base font-medium">About</Link></li>
             <li><Link href="/buy" className="block text-black hover:text-blue-600 transition text-base font-medium">Buy</Link></li>
@@ -48,7 +48,8 @@ export default function Header() {
             <li><Link href="/properties" className="block text-black hover:text-blue-600 transition text-base font-medium">Properties</Link></li>
             <li><Link href="/blog" className="block text-black hover:text-blue-600 transition text-base font-medium">Blog</Link></li>
             <li><Link href="/contact" className="block text-black hover:text-blue-600 transition text-base font-medium">Contact</Link></li>
-          </ul>
+            </ul>
+          </nav>
 
           <div className="hidden lg:flex items-center space-x-4">
             <button 

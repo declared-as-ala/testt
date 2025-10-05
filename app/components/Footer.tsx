@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
           <div className="max-w-xl">
             <h3 className="text-3xl font-bold mb-3">Stay Updated with Buygrab Realty</h3>
-            <p className="text-gray-400 text-base">
+            <p className="text-white text-base">
               Get the latest property insights, market trends, and AI-powered recommendations delivered to your inbox.
             </p>
           </div>
@@ -44,10 +44,10 @@ export default function Footer() {
             height={45}
             className="mb-6"
           />
-          <p className="text-gray-400 mb-8 leading-relaxed text-sm">
+          <p className="text-white mb-8 leading-relaxed text-sm">
             Revolutionizing real estate with AI-powered search and personalized property recommendations. Find your perfect home with intelligent insights and cutting-edge technology.
           </p>
-          <div className="space-y-3 text-gray-400 text-sm">
+          <div className="space-y-3 text-white text-sm">
             <div className="flex items-start gap-3">
               <MapPin size={18} className="text-blue-500 flex-shrink-0 mt-0.5" />
               <span>B101, Sector 1, Noida, 201301, UP (India)</span>
@@ -66,7 +66,7 @@ export default function Footer() {
         {/* Company Links */}
         <div>
           <h4 className="font-bold mb-5 text-lg">Company</h4>
-          <ul className="space-y-3 text-gray-400 text-sm">
+          <ul className="space-y-3 text-white text-sm">
             <li><Link href="#" className="hover:text-white transition-colors">About Us</Link></li>
             <li><Link href="#" className="hover:text-white transition-colors">Our Team</Link></li>
             <li><Link href="#" className="hover:text-white transition-colors">Careers</Link></li>
@@ -78,7 +78,7 @@ export default function Footer() {
         {/* Services Links */}
         <div>
           <h4 className="font-bold mb-5 text-lg">Services</h4>
-          <ul className="space-y-3 text-gray-400 text-sm">
+          <ul className="space-y-3 text-white text-sm">
             <li><Link href="/best-real-estate-lead-generation-services-india" className="hover:text-white transition-colors">Real Estate Lead Generation</Link></li>
             <li><Link href="/residential-properties" className="hover:text-white transition-colors">Residential Properties</Link></li>
             <li><Link href="/flat-for-rent-near-me" className="hover:text-white transition-colors">Flats for Rent Near Me</Link></li>
@@ -89,7 +89,7 @@ export default function Footer() {
         {/* Properties Links */}
         <div>
           <h4 className="font-bold mb-5 text-lg">Properties</h4>
-          <ul className="space-y-3 text-gray-400 text-sm">
+          <ul className="space-y-3 text-white text-sm">
             <li><Link href="/flat-for-rent-in-new-ashok-nagar" className="hover:text-white transition-colors">Flats in New Ashok Nagar</Link></li>
             <li><Link href="/1-bhk-flat-in-new-ashok-nagar-for-rent" className="hover:text-white transition-colors">1 BHK Flat Rent</Link></li>
             <li><Link href="/flat-for-sale-in-new-ashok-nagar-delhi" className="hover:text-white transition-colors">Flats for Sale Delhi</Link></li>
@@ -100,7 +100,7 @@ export default function Footer() {
         {/* Resources Links */}
         <div>
           <h4 className="font-bold mb-5 text-lg">Resources</h4>
-          <ul className="space-y-3 text-gray-400 text-sm">
+          <ul className="space-y-3 text-white text-sm">
             <li><Link href="#" className="hover:text-white transition-colors">Market Reports</Link></li>
             <li><Link href="#" className="hover:text-white transition-colors">Investment Guide</Link></li>
             <li><Link href="#" className="hover:text-white transition-colors">Mortgage Calculator</Link></li>
@@ -112,7 +112,7 @@ export default function Footer() {
         {/* Legal Links */}
         <div>
           <h4 className="font-bold mb-5 text-lg">Legal</h4>
-          <ul className="space-y-3 text-gray-400 text-sm">
+          <ul className="space-y-3 text-white text-sm">
             <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
             <li><Link href="#" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
             <li><Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link></li>
@@ -125,10 +125,10 @@ export default function Footer() {
       {/* Bottom Section (socials + copyright) */}
       <div className="border-t border-gray-700 py-6">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-400 text-sm">
+          <p className="text-white text-sm">
             © {new Date().getFullYear()} Buygrab Realty. All rights reserved.
           </p>
-          <div className="flex items-center space-x-5 text-gray-400">
+          <div className="flex items-center space-x-5 text-white">
             <a href="#" className="hover:text-white transition-colors" aria-label="Facebook">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
