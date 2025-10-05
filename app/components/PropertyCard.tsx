@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 
 interface PropertyCardProps {
@@ -16,11 +17,14 @@ export default function PropertyCard({ title, location, price, beds, baths, area
   return (
     <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
       <div className="relative h-64 bg-gray-200 overflow-hidden group">
-        <img 
-          src={image} 
+        <Image
+          src={image.replace(/w=\d+/, 'w=395').replace(/h=\d+/, 'h=296') + '&fit=crop'}
           alt={`${title} - ${location} property for ${status.toLowerCase()}`}
-          className="object-cover group-hover:scale-110 transition-transform duration-500 w-full h-full"
+          width={395}
+          height={296}
           loading="lazy"
+          style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
+          className="object-cover group-hover:scale-110 transition-transform duration-500 w-full h-full"
         />
         <div className="absolute top-4 left-4">
           <span 

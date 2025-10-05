@@ -11,14 +11,14 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <img 
-              src="https://www.buygrab.in/buygrab-logo.png" 
-              alt="BuyGrab Realty" 
-              width={259} 
-              height={40}
+            <Image
+              src="/buygrab-logo.png"
+              alt="BuyGrab Realty"
+              width={436}
+              height={67}
+              priority
               style={{ maxWidth: '100%', height: 'auto', display: 'block' }}
               className="h-10 w-auto"
-              loading="lazy"
             />
           </Link>
           
