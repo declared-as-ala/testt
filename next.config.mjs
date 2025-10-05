@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
+  output: 'export', // Enable static exports
+  images: {
+    unoptimized: true, // Required for static export
+  },
   
   // Performance optimizations
   experimental: {
