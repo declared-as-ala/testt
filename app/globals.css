@@ -273,21 +273,61 @@ footer a:hover {
   background-color: #c2410c !important; /* Dark orange for better contrast */
 }
 
-/* Ensure all blue buttons have sufficient contrast */
+/* Ensure all blue buttons have sufficient contrast - WCAG AA compliant */
 .bg-blue-600 {
   background-color: #1e3a8a !important; /* Very dark blue for maximum contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
 }
 
 .bg-blue-700 {
   background-color: #1e40af !important; /* Even darker blue for hover states */
+  color: #ffffff !important; /* White text for maximum contrast */
 }
 
 .bg-blue-800 {
   background-color: #1e40af !important; /* Very dark blue for maximum contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
 }
 
 .bg-blue-900 {
   background-color: #1e3a8a !important; /* Darkest blue for maximum contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+/* Ensure gradient buttons have sufficient contrast */
+.bg-gradient-to-r {
+  color: #ffffff !important; /* White text for maximum contrast on gradient */
+}
+
+/* Ensure all text on colored backgrounds has sufficient contrast */
+.text-white {
+  color: #ffffff !important; /* Pure white for maximum contrast */
+}
+
+/* Ensure all interactive elements meet WCAG AA standards */
+button, a, input, select, textarea {
+  color: #111827 !important; /* High contrast text */
+}
+
+button:focus, a:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid #3B82F6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure all status badges have sufficient contrast */
+.bg-green-800 {
+  background-color: #166534 !important; /* Dark green for better contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+.bg-blue-800 {
+  background-color: #1e40af !important; /* Dark blue for better contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+.bg-orange-500 {
+  background-color: #c2410c !important; /* Dark orange for better contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
 }
 
 @layer utilities {

@@ -7,7 +7,9 @@
     "build": "next build && node scripts/fix-html.mjs",
     "start": "next start",
     "lint": "next lint",
-    "fix-html": "node scripts/fix-html.mjs"
+    "fix-html": "node scripts/fix-html.mjs",
+    "analyze": "ANALYZE=true next build",
+    "build:modern": "NODE_ENV=production next build"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",

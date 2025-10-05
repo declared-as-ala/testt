@@ -7,6 +7,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import ChatWidget from '@/components/ChatWidget';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -73,8 +75,50 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Read critical CSS
+  const criticalCSS = readFileSync(join(process.cwd(), 'app', 'critical.css'), 'utf8');
+  
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to critical domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://www.buygrab.in" />
+        
+        {/* Preload critical resources */}
+        <link 
+          rel="preload" 
+          href="https://www.buygrab.in/images/pexels-photo-1571460-lg.webp" 
+          as="image" 
+          type="image/webp"
+          fetchPriority="high"
+        />
+        
+        {/* Inline critical CSS */}
+        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
+        
+        {/* Defer non-critical CSS */}
+        <link 
+          rel="preload" 
+          href="/_next/static/css/app/layout.css" 
+          as="style" 
+        />
+        <noscript>
+          <link rel="stylesheet" href="/_next/static/css/app/layout.css" />
+        </noscript>
+        
+        {/* DNS prefetch for performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
+        
+        {/* Resource hints for better performance */}
+        <link rel="prefetch" href="/buy" />
+        <link rel="prefetch" href="/rent" />
+        <link rel="prefetch" href="/sell" />
+      </head>
       <body className={inter.className}>
         <CustomCursor />
         <Header />

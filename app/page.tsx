@@ -10,7 +10,7 @@ const featuredProperties = [
     beds: "4", 
     baths: "3", 
     area: "2400", 
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop&auto=format&q=80",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop&auto=format&q=85&f=webp",
     status: "For Sale",
     featured: true
   },
@@ -21,7 +21,7 @@ const featuredProperties = [
     beds: "2", 
     baths: "2", 
     area: "1200", 
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop&auto=format&q=80",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop&auto=format&q=85&f=webp",
     status: "For Rent",
     featured: false
   },
@@ -32,7 +32,7 @@ const featuredProperties = [
     beds: "1", 
     baths: "1", 
     area: "450", 
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop&auto=format&q=80",
+    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop&auto=format&q=85&f=webp",
     status: "For Rent",
     featured: false
   },
@@ -43,7 +43,7 @@ const featuredProperties = [
     beds: "2", 
     baths: "2", 
     area: "1100", 
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop&auto=format&q=80",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop&auto=format&q=85&f=webp",
     status: "For Sale",
     featured: true
   },
@@ -54,7 +54,7 @@ const featuredProperties = [
     beds: "5", 
     baths: "4", 
     area: "3200", 
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop&auto=format&q=80",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&auto=format&q=85&f=webp",
     status: "For Sale",
     featured: true
   },
@@ -65,7 +65,7 @@ const featuredProperties = [
     beds: "3", 
     baths: "2", 
     area: "1800", 
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop&auto=format&q=80",
+    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop&auto=format&q=85&f=webp",
     status: "For Rent",
     featured: false
   },

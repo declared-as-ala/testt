@@ -1,17 +1,26 @@
 'use client'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function HeroSection() {
   const [searchQuery, setSearchQuery] = useState('')
 
   return (
-    <section
-      className="relative h-screen flex items-center justify-center bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "url('https://www.buygrab.in/images/pexels-photo-1571460-lg.webp')",
-      }}
-    >
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Optimized background image with fetchpriority and preload */}
+      <Image
+        src="https://www.buygrab.in/images/pexels-photo-1571460-lg.webp"
+        alt="Modern real estate property showcase"
+        fill
+        priority
+        fetchPriority="high"
+        quality={90}
+        sizes="100vw"
+        className="object-cover"
+        style={{
+          objectPosition: 'center center',
+        }}
+      />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
