@@ -397,26 +397,7 @@ export default function BlogPage() {
       </div>
 
       {/* Newsletter Section */}
-      <section className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated with Buygrab Realty</h2>
-            <p className="text-gray-300 mb-8">
-              Get the latest property insights, market trends, and AI-powered recommendations delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-6 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition whitespace-nowrap">
-                Subscribe →
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+   
     </div>
   );
 }
