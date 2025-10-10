@@ -12,10 +12,10 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
-              src="https://www.buygrab.in/buygrab-logo.png"
+              src="/buygrap.webp"
               alt="BuyGrab Realty"
-              width={436}
-              height={67}
+              width={240}
+              height={40}
               priority
               style={{ maxWidth: '240px', height: 'auto', display: 'block', objectFit: 'contain' }}
               className="h-10 w-auto mx-auto"

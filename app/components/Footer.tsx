@@ -38,10 +38,10 @@ export default function Footer() {
         {/* Company Info */}
         <div>
           <Image
-            src="https://www.buygrab.in/buygrab-logo.png"
+            src="/buygrap.webp"
             alt="BuyGrab Realty"
             width={180}
-            height={45}
+            height={40}
             className="mb-6"
           />
           <p className="text-white mb-8 leading-relaxed text-sm">
@@ -67,7 +67,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-5 text-lg">Company</h4>
           <ul className="space-y-3 text-white text-sm">
-            <li><Link href="#" className="text-white hover:text-white transition-colors">About Us</Link></li>
+            <li><Link href="/about" className="text-white hover:text-white transition-colors">About Us</Link></li>
             <li><Link href="#" className="text-white hover:text-white transition-colors">Our Team</Link></li>
             <li><Link href="#" className="text-white hover:text-white transition-colors">Careers</Link></li>
             <li><Link href="#" className="text-white hover:text-white transition-colors">Press</Link></li>
@@ -114,10 +114,10 @@ export default function Footer() {
           <h4 className="font-bold mb-5 text-lg">Legal</h4>
           <ul className="space-y-3 text-white text-sm">
             <li><Link href="/privacy-policy" className="text-white hover:text-white transition-colors">Privacy Policy</Link></li>
-            <li><Link href="#" className="text-white hover:text-white transition-colors">Terms & Conditions</Link></li>
-            <li><Link href="#" className="text-white hover:text-white transition-colors">Cookie Policy</Link></li>
-            <li><Link href="#" className="text-white hover:text-white transition-colors">Disclaimer</Link></li>
-            <li><Link href="#" className="text-white hover:text-white transition-colors">Accessibility</Link></li>
+            <li><Link href="/terms-and-conditions" className="text-white hover:text-white transition-colors">Terms & Conditions</Link></li>
+            <li><Link href="/Cookie-Policy" className="text-white hover:text-white transition-colors">Cookie Policy</Link></li>
+            <li><Link href="/Disclaimer" className="text-white hover:text-white transition-colors">Disclaimer</Link></li>
+            <li><Link href="/Accessibility" className="text-white hover:text-white transition-colors">Accessibility</Link></li>
           </ul>
         </div>
       </div>
