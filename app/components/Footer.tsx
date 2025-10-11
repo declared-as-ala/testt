@@ -40,27 +40,15 @@ export default function Footer() {
           <Image
             src="/buygrap.webp"
             alt="BuyGrab Realty"
-            width={180}
-            height={40}
+            width={300}
+            height={100}
             className="mb-6"
           />
           <p className="text-white mb-8 leading-relaxed text-sm">
             Revolutionizing real estate with AI-powered search and personalized property recommendations. Find your perfect home with intelligent insights and cutting-edge technology.
           </p>
-          <div className="space-y-3 text-white text-sm">
-            <div className="flex items-start gap-3">
-              <MapPin size={18} className="text-blue-500 flex-shrink-0 mt-0.5" />
-              <span>B101, Sector 1, Noida, 201301, UP (India)</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Phone size={18} className="text-blue-500 flex-shrink-0" />
-              <span>+91 906 968 9226</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Mail size={18} className="text-blue-500 flex-shrink-0" />
-              <span>support@buygrab.in</span>
-            </div>
-          </div>
+         
+      
         </div>
 
         {/* Company Links */}
