@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1a5cff;
+  --secondary: #0d47a1;
+  --accent: #ff6b35;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Performance optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+  loading: lazy;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-follower {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.15s ease;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+  width: 50px;
+  height: 50px;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Parallax effect */
+.parallax {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Focus styles for accessibility */
+.focus-visible:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .custom-cursor {
+    border-width: 3px;
+  }
+  
+  .custom-cursor-follower {
+    border-width: 2px;
+  }
+}
+
+/* Improve contrast ratios - WCAG AA compliant */
+.text-gray-600 {
+  color: #111827 !important; /* Maximum contrast for better readability */
+}
+
+.text-gray-500 {
+  color: #1F2937 !important; /* High contrast for better readability */
+}
+
+.text-gray-400 {
+  color: #374151 !important; /* High contrast for better readability */
+}
+
+/* Ensure high contrast for all text elements */
+.text-gray-700 {
+  color: #000000 !important; /* Maximum contrast for important text */
+}
+
+.text-gray-300 {
+  color: #1F2937 !important; /* High contrast for light text */
+}
+
+.text-gray-200 {
+  color: #374151 !important; /* High contrast for very light text */
+}
+
+/* Ensure all gray text has sufficient contrast */
+.text-gray-800 {
+  color: #000000 !important; /* Maximum contrast */
+}
+
+.text-gray-900 {
+  color: #000000 !important; /* Maximum contrast */
+}
+
+/* Ensure sufficient contrast for interactive elements */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #3B82F6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Improve contrast for form elements */
+input::placeholder,
+textarea::placeholder {
+  color: #6B7280 !important; /* Better contrast for placeholders */
+}
+
+/* Ensure proper contrast for disabled states */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Additional contrast improvements */
+.text-gray-800 {
+  color: #111827 !important; /* Maximum contrast */
+}
+
+.text-gray-900 {
+  color: #000000 !important; /* Maximum contrast */
+}
+
+/* Ensure all links have sufficient contrast */
+a {
+  color: #1D4ED8 !important; /* High contrast blue */
+}
+
+a:hover {
+  color: #1E40AF !important; /* Darker blue on hover */
+}
+
+/* Ensure form elements have proper contrast */
+input, select, textarea {
+  color: #111827 !important; /* High contrast text */
+  background-color: #FFFFFF !important; /* High contrast background */
+}
+
+/* Ensure placeholder text has sufficient contrast */
+::placeholder {
+  color: #6B7280 !important; /* Better contrast for placeholders */
+}
+
+/* Ensure green text has sufficient contrast */
+.text-green-600 {
+  color: #166534 !important; /* Darker green for better contrast */
+}
+
+.text-green-500 {
+  color: #14532d !important; /* Darker green for better contrast */
+}
+
+/* Ensure footer links have sufficient contrast */
+footer a {
+  color: #FFFFFF !important; /* White text for maximum contrast on dark background */
+}
+
+footer a:hover {
+  color: #FFFFFF !important; /* Maintain white on hover */
+}
+
+/* Ensure property status badges have sufficient contrast */
+.bg-emerald-500 {
+  background-color: #166534 !important; /* Dark green for better contrast */
+}
+
+.bg-blue-500 {
+  background-color: #1e40af !important; /* Dark blue for better contrast */
+}
+
+.bg-orange-500 {
+  background-color: #c2410c !important; /* Dark orange for better contrast */
+}
+
+/* Ensure all blue buttons have sufficient contrast - WCAG AA compliant */
+.bg-blue-600 {
+  background-color: #1e3a8a !important; /* Very dark blue for maximum contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+.bg-blue-700 {
+  background-color: #1e40af !important; /* Even darker blue for hover states */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+.bg-blue-800 {
+  background-color: #1e40af !important; /* Very dark blue for maximum contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+.bg-blue-900 {
+  background-color: #1e3a8a !important; /* Darkest blue for maximum contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+/* Ensure gradient buttons have sufficient contrast */
+.bg-gradient-to-r {
+  color: #ffffff !important; /* White text for maximum contrast on gradient */
+}
+
+/* Ensure all text on colored backgrounds has sufficient contrast */
+.text-white {
+  color: #ffffff !important; /* Pure white for maximum contrast */
+}
+
+/* Ensure all interactive elements meet WCAG AA standards */
+button, a, input, select, textarea {
+  color: #111827 !important; /* High contrast text */
+}
+
+button:focus, a:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid #3B82F6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure all status badges have sufficient contrast */
+.bg-green-800 {
+  background-color: #166534 !important; /* Dark green for better contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+.bg-blue-800 {
+  background-color: #1e40af !important; /* Dark blue for better contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+.bg-orange-500 {
+  background-color: #c2410c !important; /* Dark orange for better contrast */
+  color: #ffffff !important; /* White text for maximum contrast */
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600;
+  }
+  
+  /* Performance utilities */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .will-change-opacity {
+    will-change: opacity;
+  }
+  
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
