@@ -40,8 +40,8 @@ export default function Footer() {
           <Image
             src="/buygrap.webp"
             alt="BuyGrab Realty"
-            width={300}
-            height={100}
+            width={400}
+            height={130}
             className="mb-6"
           />
           <p className="text-white mb-8 leading-relaxed text-sm">

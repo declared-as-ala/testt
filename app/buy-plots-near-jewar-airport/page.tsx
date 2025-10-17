@@ -6,8 +6,19 @@ const JewarAirportPlots = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 text-white py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      <div className="relative min-h-[80vh] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" 
+            alt="Jewar Airport Development Aerial View" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900/70 to-purple-800/80"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto text-center text-white py-20 px-6">
           <div className="flex items-center justify-center gap-2 mb-6">
             <Plane className="w-5 h-5" />
             <span className="text-sm font-medium">Prime Investment Opportunity</span>

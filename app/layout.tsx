@@ -6,7 +6,6 @@ import Image from 'next/image';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import CustomCursor from '@/components/CustomCursor';
 import ChatWidget from '@/components/ChatWidget';
 
 const inter = Inter({ 
@@ -77,7 +76,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className}>
-        <CustomCursor />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
